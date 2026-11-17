@@ -1,0 +1,2 @@
+-- insert into patient (id, name, gender, email, birthdate)
+-- values ('4b20a513-8134-4e6c-a1c0-fb16853bd4f4','name2','male','name2@gmail.com','1990-01-01');
