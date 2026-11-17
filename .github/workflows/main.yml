@@ -20,7 +20,7 @@ jobs:
           java-version: 21
 
       - name: Build and build-test
-        working-directory: ./
+        working-directory: /
         run: mvn -B clean verify
 
       - name: Upload test report
