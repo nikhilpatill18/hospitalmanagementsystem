@@ -29,7 +29,8 @@ public class PatientTest {
         // List<Patient> patient = patientrepository.findAll();
         //
         // System.out.println(patient);
-        Patient patient = patientrepository.findByName("name1");
+        // Patient patient = patientrepository.findByName("name1");
+        System.out.println("hello");
 
     }
 
@@ -57,11 +58,12 @@ public class PatientTest {
         // System.out.println(dt);
         // }
 
-        Page<Patient> patients = patientrepository.getAllPatient(PageRequest.of(0, 1));
+        // Page<Patient> patients = patientrepository.getAllPatient(PageRequest.of(0,
+        // 1));
 
-        for (Patient p : patients) {
-            System.out.println(p);
-        }
+        // for (Patient p : patients) {
+        // System.out.println(p);
+        // }
 
     }
 }
