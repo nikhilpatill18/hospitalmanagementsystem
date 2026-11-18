@@ -1,6 +1,5 @@
 package com.hospitalmanagementsystem.hospitalmanagementsystem.entity;
 
-
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -25,9 +24,9 @@ public class Doctor {
     @Column(nullable = false)
     private String speicalization;
 
-    @Column(nullable = false,unique = true)
+    @Column(nullable = false, unique = true)
     private String email;
 
-    @OneToMany(mappedBy = "doctor s")
+    @OneToMany(mappedBy = "doctor")
     private List<Appointment> appointment;
 }
