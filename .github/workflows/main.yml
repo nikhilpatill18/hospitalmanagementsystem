@@ -71,6 +71,5 @@ jobs:
           context: .
           push: true
           tags: |
-                hms:latest
-                hms:{{ github.sha }}
-                hms:{{ github.ref }} 
+            nikhill18/hms:latest
+            nikhill18/hms:${{ github.sha }} 
