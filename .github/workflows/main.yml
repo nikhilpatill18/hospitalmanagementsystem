@@ -72,5 +72,5 @@ jobs:
           push: true
           tags: |
                 hms:latest
-                hms:{{ github.sa }}
+                hms:{{ github.sha }}
                 hms:{{ github.ref }} 
