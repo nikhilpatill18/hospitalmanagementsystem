@@ -49,3 +49,28 @@ jobs:
     steps:
       - name: checkout-code
         uses: actions/checkout@v2
+
+      - name: stepup-jdk
+        uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: 21
+
+      - name: Build Jar for docker
+        run: mvn -B clean package -DskipTests
+
+      - name: login to docker
+        uses: docker/login-action@v4
+        with: 
+          username: nikhill18
+          password: SUNIL%0571
+      
+      - name: Build and push Docker Image
+        uses: docker/build-push-action@v7
+        with:
+          context: .
+          push: true
+          tags: |
+            hms:latest
+            hms:{{github.sa}}
+            hms:{{github.ref}} 
