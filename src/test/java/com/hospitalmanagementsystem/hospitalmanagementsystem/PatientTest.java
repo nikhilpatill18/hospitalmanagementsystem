@@ -18,11 +18,11 @@ import java.util.UUID;
 @SpringBootTest
 public class PatientTest {
 
-    @Autowired
-    private PatientRepository patientrepository;
+    // @Autowired
+    // private PatientRepository patientrepository;
 
-    @Autowired
-    private PatientService patientService;
+    // @Autowired
+    // private PatientService patientService;
 
     @Test
     public void patienttest() {
