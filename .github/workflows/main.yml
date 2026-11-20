@@ -97,3 +97,6 @@ jobs:
 
       - name: verify connection
         run: kubectl get node
+
+      - name: deploy to aws
+        run: kubctl apply -f kubectl.yml
