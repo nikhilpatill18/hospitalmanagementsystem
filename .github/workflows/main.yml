@@ -96,7 +96,4 @@ jobs:
         run: aws eks update-kubeconfig --name ${{ secrets.CLUSTER_NAME}} --region ap-south-1
 
       - name: verify connection
-        uses: kubectl get nodes
-
-      # - name: deploy aws
-      #   uses: kubectl apply -f kubectl.yaml
+        run: kubectl get node
