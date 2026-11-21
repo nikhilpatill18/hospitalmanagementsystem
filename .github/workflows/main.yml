@@ -100,7 +100,7 @@ jobs:
         run: kubectl get node
       
       - name: add-kube-config
-        run: kubectl app -f app-config.yml
+        run: kubectl apply -f app-config.yml
 
       - name: deploy to aws
         run: kubectl apply -f kubectl.yml
