@@ -2,7 +2,8 @@ name: java-spring-boot-cicd
 
 on:
   push:
-
+    paths:
+      - src/
   workflow_dispatch:
 
 jobs:
@@ -97,6 +98,9 @@ jobs:
 
       - name: verify connection
         run: kubectl get node
+      
+      - name: add-kube-config
+        run: kubectl app -f app-config.yml
 
       - name: deploy to aws
         run: kubectl apply -f kubectl.yml
